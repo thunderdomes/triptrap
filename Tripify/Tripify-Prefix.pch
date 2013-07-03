@@ -13,4 +13,5 @@
 	#import <Foundation/Foundation.h>
 #import "netraCommon.h"
 #import "CoreData+MagicalRecord.h"
+#import <QuartzCore/QuartzCore.h>
 #endif
