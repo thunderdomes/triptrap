@@ -59,6 +59,7 @@
 		D06301F617848F6D007EC627 /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = D06301F317848F6D007EC627 /* MJPopupBackgroundView.m */; };
 		D06301F717848F6D007EC627 /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06301F517848F6D007EC627 /* UIViewController+MJPopupViewController.m */; };
 		D06301F917848FBF007EC627 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06301F817848FBF007EC627 /* QuartzCore.framework */; };
+		D06301FD17849165007EC627 /* rightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06301FC17849165007EC627 /* rightViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -162,6 +163,8 @@
 		D06301F417848F6D007EC627 /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
 		D06301F517848F6D007EC627 /* UIViewController+MJPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJPopupViewController.m"; sourceTree = "<group>"; };
 		D06301F817848FBF007EC627 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D06301FB17849165007EC627 /* rightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rightViewController.h; sourceTree = "<group>"; };
+		D06301FC17849165007EC627 /* rightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rightViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -435,6 +438,7 @@
 		D06301E017848AA6007EC627 /* right */ = {
 			isa = PBXGroup;
 			children = (
+				D06301FA17849156007EC627 /* index */,
 			);
 			path = right;
 			sourceTree = "<group>";
@@ -476,6 +480,15 @@
 				D06301F517848F6D007EC627 /* UIViewController+MJPopupViewController.m */,
 			);
 			path = Pop;
+			sourceTree = "<group>";
+		};
+		D06301FA17849156007EC627 /* index */ = {
+			isa = PBXGroup;
+			children = (
+				D06301FB17849165007EC627 /* rightViewController.h */,
+				D06301FC17849165007EC627 /* rightViewController.m */,
+			);
+			path = index;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -587,6 +600,7 @@
 				D06301F017848F5B007EC627 /* UIViewController+JASidePanel.m in Sources */,
 				D06301F617848F6D007EC627 /* MJPopupBackgroundView.m in Sources */,
 				D06301F717848F6D007EC627 /* UIViewController+MJPopupViewController.m in Sources */,
+				D06301FD17849165007EC627 /* rightViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
