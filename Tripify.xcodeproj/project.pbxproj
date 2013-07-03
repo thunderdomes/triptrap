@@ -54,6 +54,11 @@
 		D06301D8178486F3007EC627 /* MagicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D06301BC178486F3007EC627 /* MagicalRecord.m */; };
 		D06301DA17848802007EC627 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06301D917848802007EC627 /* CoreData.framework */; };
 		D06301E917848BB1007EC627 /* indexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06301E817848BB1007EC627 /* indexViewController.m */; };
+		D06301EF17848F5B007EC627 /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06301EC17848F5B007EC627 /* JASidePanelController.m */; };
+		D06301F017848F5B007EC627 /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = D06301EE17848F5B007EC627 /* UIViewController+JASidePanel.m */; };
+		D06301F617848F6D007EC627 /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = D06301F317848F6D007EC627 /* MJPopupBackgroundView.m */; };
+		D06301F717848F6D007EC627 /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06301F517848F6D007EC627 /* UIViewController+MJPopupViewController.m */; };
+		D06301F917848FBF007EC627 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06301F817848FBF007EC627 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,6 +153,15 @@
 		D06301D917848802007EC627 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D06301E717848BB1007EC627 /* indexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = indexViewController.h; sourceTree = "<group>"; };
 		D06301E817848BB1007EC627 /* indexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = indexViewController.m; sourceTree = "<group>"; };
+		D06301EB17848F5B007EC627 /* JASidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JASidePanelController.h; sourceTree = "<group>"; };
+		D06301EC17848F5B007EC627 /* JASidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JASidePanelController.m; sourceTree = "<group>"; };
+		D06301ED17848F5B007EC627 /* UIViewController+JASidePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JASidePanel.h"; sourceTree = "<group>"; };
+		D06301EE17848F5B007EC627 /* UIViewController+JASidePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JASidePanel.m"; sourceTree = "<group>"; };
+		D06301F217848F6D007EC627 /* MJPopupBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPopupBackgroundView.h; sourceTree = "<group>"; };
+		D06301F317848F6D007EC627 /* MJPopupBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPopupBackgroundView.m; sourceTree = "<group>"; };
+		D06301F417848F6D007EC627 /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
+		D06301F517848F6D007EC627 /* UIViewController+MJPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJPopupViewController.m"; sourceTree = "<group>"; };
+		D06301F817848FBF007EC627 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D06301F917848FBF007EC627 /* QuartzCore.framework in Frameworks */,
 				D06301DA17848802007EC627 /* CoreData.framework in Frameworks */,
 				D06301421784618C007EC627 /* UIKit.framework in Frameworks */,
 				D06301441784618C007EC627 /* Foundation.framework in Frameworks */,
@@ -168,6 +183,7 @@
 		D06301351784618C007EC627 = {
 			isa = PBXGroup;
 			children = (
+				D06301F817848FBF007EC627 /* QuartzCore.framework */,
 				D06301D917848802007EC627 /* CoreData.framework */,
 				D06301471784618C007EC627 /* Tripify */,
 				D06301401784618C007EC627 /* Frameworks */,
@@ -233,6 +249,8 @@
 		D063016017846213007EC627 /* component */ = {
 			isa = PBXGroup;
 			children = (
+				D06301F117848F6D007EC627 /* Pop */,
+				D06301EA17848F5B007EC627 /* SidePanel */,
 				D0630183178486F3007EC627 /* MagicalRecord */,
 				D0630166178485AF007EC627 /* AFNetworking */,
 			);
@@ -438,6 +456,28 @@
 			path = index;
 			sourceTree = "<group>";
 		};
+		D06301EA17848F5B007EC627 /* SidePanel */ = {
+			isa = PBXGroup;
+			children = (
+				D06301EB17848F5B007EC627 /* JASidePanelController.h */,
+				D06301EC17848F5B007EC627 /* JASidePanelController.m */,
+				D06301ED17848F5B007EC627 /* UIViewController+JASidePanel.h */,
+				D06301EE17848F5B007EC627 /* UIViewController+JASidePanel.m */,
+			);
+			path = SidePanel;
+			sourceTree = "<group>";
+		};
+		D06301F117848F6D007EC627 /* Pop */ = {
+			isa = PBXGroup;
+			children = (
+				D06301F217848F6D007EC627 /* MJPopupBackgroundView.h */,
+				D06301F317848F6D007EC627 /* MJPopupBackgroundView.m */,
+				D06301F417848F6D007EC627 /* UIViewController+MJPopupViewController.h */,
+				D06301F517848F6D007EC627 /* UIViewController+MJPopupViewController.m */,
+			);
+			path = Pop;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -543,6 +583,10 @@
 				D06301D7178486F3007EC627 /* MagicalRecord+ShorthandSupport.m in Sources */,
 				D06301D8178486F3007EC627 /* MagicalRecord.m in Sources */,
 				D06301E917848BB1007EC627 /* indexViewController.m in Sources */,
+				D06301EF17848F5B007EC627 /* JASidePanelController.m in Sources */,
+				D06301F017848F5B007EC627 /* UIViewController+JASidePanel.m in Sources */,
+				D06301F617848F6D007EC627 /* MJPopupBackgroundView.m in Sources */,
+				D06301F717848F6D007EC627 /* UIViewController+MJPopupViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,6 +666,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tripify/Tripify-Prefix.pch";
 				INFOPLIST_FILE = "Tripify/Tripify-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -633,6 +678,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tripify/Tripify-Prefix.pch";
 				INFOPLIST_FILE = "Tripify/Tripify-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -657,6 +703,7 @@
 				D063015D1784618C007EC627 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
