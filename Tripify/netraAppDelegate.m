@@ -9,13 +9,19 @@
 #import "netraAppDelegate.h"
 
 @implementation netraAppDelegate
-
+@synthesize indexCenter;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+	
+	UINavigationController *center=[[UINavigationController alloc]initWithRootViewController:indexCenter];
     self.window.backgroundColor = [UIColor whiteColor];
+	self.window.rootViewController=center;
     [self.window makeKeyAndVisible];
+	
+	//adding coredata
+	[MagicalRecord setupCoreDataStackWithStoreNamed:@"tripify.sqlite"];
     return YES;
 }
 
