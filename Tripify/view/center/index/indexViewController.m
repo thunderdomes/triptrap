@@ -37,11 +37,11 @@
 	NSURL *URL=[NSURL URLWithString:url];
 	NSMutableURLRequest * request = [[NSMutableURLRequest alloc] initWithURL:URL cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60];
 	AFJSONRequestOperation *operation=[[AFJSONRequestOperation alloc] initWithRequest:request];
+	
 	[AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"application/json"]];
 	
     //AFHTTPRequestOperation * operation =[[AFHTTPRequestOperation alloc] initWithRequest:request];
 	[operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-		NSLog(@"response Object--->%@",responseObject);
 		[self fetchDetails:[[responseObject objectForKey:@"request"]objectForKey:@"instanceId"]];
 	}failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 		if(error){
@@ -59,19 +59,13 @@
 }
 -(void)fetchDetails:(NSString*)instanceId{
 	NSString *url=[NSString stringWithFormat:@"%@/pull.html?format=json&apiKey=%@&instanceId=%@&rand=1",flight_url,api_key,instanceId];
-	
+	NSLog(@"url--->%@",url);
 	NSURL *URL=[NSURL URLWithString:url];
 	NSMutableURLRequest * request = [[NSMutableURLRequest alloc] initWithURL:URL cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60];
 	AFJSONRequestOperation *operation=[[AFJSONRequestOperation alloc] initWithRequest:request];
-	//[AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"application/json"]];
-	
-    //AFHTTPRequestOperation * operation =[[AFHTTPRequestOperation alloc] initWithRequest:request];
 	[operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-		NSLog(@"response Object--->%@",responseObject);
 	}failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 		if(error){
-			//[spinner stopAnimating];
-			//regional_radioList.hidden=YES;
 		}
         NSLog(@"error: %@", [error description]);
 		
