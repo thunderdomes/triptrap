@@ -14,7 +14,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-	
+	indexCenter=[[indexViewController alloc]init];
 	UINavigationController *center=[[UINavigationController alloc]initWithRootViewController:indexCenter];
     self.window.backgroundColor = [UIColor whiteColor];
 	self.window.rootViewController=center;
